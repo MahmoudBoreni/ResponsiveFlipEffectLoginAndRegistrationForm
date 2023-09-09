@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Login and Registration Form in HTML & CSS | CodingLab </title>
+    <link rel="stylesheet" href="Form.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <!-- **-------------------------------------------------------------------------------------** -->
+    <!-- Image Side Part -->
+    <div class="container"> <!--Container Div Start-->
+        <input type="checkbox" id="flip">
+        <div class="cover">
+
+            <div class="front">
+                <img src="photo.jpg" alt="FrontPhoto">
+                <div class="text">
+                    <span class="text-1">Every new friend is a <br> new adventure</span>
+                    <span class="text-2">Let's get connected</span>
+                </div>
+            </div>
+
+            <div class="back">
+                <img class="backImg" src="photo_2.jpg" alt="BackPhoto">
+                <div class="text">
+                    <span class="text-1">Complete miles of journey <br> with one step</span>
+                    <span class="text-2">Let's get started</span>
+                </div>
+            </div> <!--Cover div end-->
+</div>
+<!-- **-------------------------------------------------------------------------------------** -->
+
+<!-- login Part -->
+<!-- **-------------------------------------------------------------------------------------** -->
+<div class="forms">
+    <div class="form-content">
+        <div class="login-form">
+            <div class="title">Login</div>
+            <form action="loginDone.html" method="post" id="LoginForm" onsubmit="return validateForm_1()">
+                <div class="input-boxes">
+                    <div class="input-box">
+                            <i class="fas fa-envelope" id="icon"></i>   <!-- Email Icon -->
+                            <!-- <i class="uil uil-envelope-block"></i> -->
+                            <input type="text" placeholder="Enter your email" required id="LoginForm-Email" name="loginEmail" class="firstField">
+                        </div>
+                        <!-- ---- JS -->
+                        <!-- <script>
+                            const input = document.querySelector("input"),
+                            emailIcon = document.querySelector(".fa-envelope")
+                            
+                            input.addEventListener("keyup", ()=> {
+                                let pattern =  /^[^ ]+\.[a-z]{2.3}$/;
+                                
+                                if(input.value.match(pattern)){
+                                    emailIcon.classList.replace("fa-envelope" , "fa-envelope");
+                                    return emailIcon.style.color = "#4bb543"
+                                }
+                                emailIcon.classList.replace("fa-envelope" , "fa-envelope")
+                                emailIcon.style.color = "#de0611"
+                            })
+                            </script> -->
+                            <!-- ---- JS -->
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>  <!-- Password Icon -->
+                            <input type="password" placeholder="Enter your password" required id="LoginForm-Password" name="loginPassword">
+                        </div>
+                        <div class="text"><a href="#">Forgot password?</a></div>
+                        <div class="button input-box">
+                            <input type="submit" value="Sumbit">
+                        </div>
+                        <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                    </div>
+                </form>
+            </div>
+            <!-- **-------------------------------------------------------------------------------------** -->
+            
+            <!-- Sing Up Part -->
+            <!-- **-------------------------------------------------------------------------------------** -->
+            <div class="signup-form">
+                <div class="title">Signup</div>
+                <form action="signUpDone.html" method="post" id="SignUpForm" onsubmit="return validateForm_2()" class="firstField">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>  <!-- User Icon -->
+                            <input type="text" placeholder="Enter your name" required id="SignUpForm_UserName"
+                            class="SignUpForm" name="signUpUserName">
+                        </div>
+
+                         <!-- ---- JS -->
+                         <!-- <script>
+                            function fieldFocusIn(){
+                                input.addEventListener("keyup", ()=> {
+                                let pattern =  /^[^ ]+\.[a-z]{2.3}$/;
+                                
+                                if(input.value.match(pattern)){
+                                    emailIcon.classList.replace("fa-envelope" , "fa-envelope");
+                                    return emailIcon.style.color = "#4bb543"
+                                }
+                                emailIcon.classList.replace("fa-envelope" , "fa-envelope")
+                                emailIcon.style.color = "#de0611"
+                            })                            
+                            }
+                            
+                            
+                            </script> -->
+                            <!-- ---- JS -->
+
+              <div class="input-box">
+                  <i class="fas fa-envelope"></i>  <!-- Email Icon -->
+                  <input type="text" placeholder="Enter your email" required id="SignUpForm_Email" name="signUpEmail">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>  <!-- Password Icon -->
+                    <input type="password" placeholder="Enter your password" required id="SignUpForm_Password" name="signUpPassword">
+                </div>
+
+                <div class="button input-box">
+                    <input type="submit" value="Sumbit">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+        </form>
+    </div>
+    <!-- **-------------------------------------------------------------------------------------** -->
+</div>
+    </div>
+  </div> <!--Container Div End-->
+  <script src="JS/Validation.js"></script>
+</body>
+</html>
